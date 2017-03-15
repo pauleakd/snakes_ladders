@@ -15,4 +15,8 @@ class Player
     @position += number
   end
 
+  def set_position(number)
+    @position = number
+  end
+
 end

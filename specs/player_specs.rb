@@ -24,4 +24,9 @@ class TestPlayer < MiniTest::Test
     assert_equal(1 + dice_value, @player1.player_position)
   end
 
+  def test_player_set_position
+    @player1.set_position(10)
+    assert_equal(10, @player1.player_position)
+  end
+
 end
