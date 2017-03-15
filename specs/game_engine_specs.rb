@@ -3,6 +3,7 @@ require('minitest/rg')
 require_relative('../game_engine')
 require_relative('../player')
 require_relative('../dice')
+require_relative('../board')
 
 
 
@@ -25,4 +26,11 @@ class TestGameEngine < MiniTest::Test
     assert_equal((2..7).include?(@players[0].player_position), true)
     assert_equal((2..7).include?(@players[1].player_position), true)
   end
+
+  def test_win
+    @game_engine.take_turn
+    assert_equal("Congratulations!!!", @game_engine.take_turn )
+  end
+
+
 end
